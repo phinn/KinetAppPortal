@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KinetAios for Mac — Local AI Agent Workstation</title>
+<meta name="description" content="Four AI agent engines in one window. Local-first, your API keys, one-time purchase. Claude Code vs Codex vs Direct — benchmarked. macOS 14+, notarized.">
+<style>
+:root{--bg:#0d1117;--card:#161b22;--border:#30363d;--fg:#e6edf3;--dim:#8b949e;--acc:#58a6ff;--gold:#e3b341;--green:#3fb950}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:-apple-system,'SF Pro Text','PingFang SC',sans-serif;line-height:1.65}
+.wrap{max-width:880px;margin:0 auto;padding:64px 24px}
+.badge{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:4px 14px;font-size:13px;color:var(--dim);margin-bottom:20px}
+h1{font-size:44px;line-height:1.15;letter-spacing:-1px;margin-bottom:16px}
+h1 .grad{background:linear-gradient(90deg,#58a6ff,#bc8cff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:19px;color:var(--dim);margin-bottom:32px}
+.sub b{color:var(--fg)}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin:28px 0 8px}
+.btn{display:inline-block;padding:14px 28px;border-radius:10px;font-size:17px;font-weight:600;text-decoration:none}
+.btn-buy{background:linear-gradient(180deg,#2f81f7,#1f6feb);color:#fff}
+.btn-try{background:linear-gradient(180deg,#3fb950,#2ea043);color:#fff;border:1px solid #2ea043}
+.btn-ghost{border:1px solid var(--border);color:var(--fg)}
+.price{color:var(--dim);font-size:14px;margin-bottom:44px}
+.price b{color:var(--gold)}
+h2{font-size:26px;margin:48px 0 16px;letter-spacing:-.5px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px}
+th,td{border:1px solid var(--border);padding:10px 14px;text-align:left;vertical-align:top}
+th{background:var(--card)}
+.win{color:var(--green);font-weight:600}
+.dim{color:var(--dim)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:16px}
+.feat{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px}
+.feat b{display:block;margin-bottom:6px}
+.feat span{color:var(--dim);font-size:14px}
+blockquote{border-left:3px solid var(--acc);padding:8px 18px;margin:20px 0;color:var(--dim);font-style:italic}
+footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--border);color:var(--dim);font-size:13px}
+footer a{color:var(--acc)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="badge">macOS 14+ · Universal · Notarized · 12 MB</div>
+<h1>Four agent engines.<br><span class="grad">One window. Your machine.</span></h1>
+<p class="sub">KinetAios for Mac runs <b>Direct V1/V2/V3, Claude Code, Codex, and DeepSeek Harness</b> side-by-side. Local SQLite memory that extracts facts automatically. No account, no relay server — <b>your LLM API key is the only auth</b>.</p>
+
+<div class="cta">
+<a class="btn btn-buy" href="#buy">Buy — $39 early bird</a>
+<a class="btn btn-ghost" href="#free">Download free tier</a>
+</div>
+<p class="price">One-time purchase. Early bird <b>$39 / ¥199</b> (first 500 licenses), then <b>$69 / ¥268</b>. Includes 1 year of major updates, works forever. <b>Not a subscription.</b></p>
+
+<h2>We benchmarked Claude Code. Then published where we lose.</h2>
+<p>Same real-world task — medical CRM cross-analysis, multi-sheet xlsx with hundreds of thousands of rows, ECharts report output — run on four engines. <a style="color:var(--acc)" href="https://github.com/phinn/KinetAios/blob/main/documents/excel-cross-analysis-engines.html">Full 12-dimension methodology →</a></p>
+<table>
+<tr><th>Engine</th><th>Score</th><th>Why</th></tr>
+<tr><td><b>Direct V1</b> (built-in)</td><td class="win">9.2 / 10</td><td>SAX-streaming xlsx tools — raw data never enters context. Three-level context fallback. Lowest token cost.</td></tr>
+<tr><td>Claude Code</td><td><b>7.0</b> / 10</td><td>Best-in-class context management, but every data step detours through Bash+python.</td></tr>
+<tr><td>Codex</td><td>5.5 / 10</td><td>OS-level sandbox is great engineering; slowest for data analysis.</td></tr>
+<tr><td>Direct V2 (ours)</td><td>3.5 / 10</td><td>Plan-Verify-Judge: same task, 2–3× tokens. <span class="dim">We published our own loss.</span></td></tr>
+</table>
+<blockquote>Same model, different harness: 3× the cost, different winner. 7.5% of API calls consumed 63% of a 1.31M-token audit. The layer under the model is your bill.</blockquote>
+
+<h2>What's in the box</h2>
+<div class="grid">
+<div class="feat"><b>4 engines, switch anytime</b><span>Each runs with native strengths; one shared local memory across all of them.</span></div>
+<div class="feat"><b>Agent teams & sub-agents</b><span>Dispatch parallel sub-agents, broadcast to teams, watch every step live.</span></div>
+<div class="feat"><b>Cron + GoalLoop</b><span>Scheduled autonomous runs and long-horizon goals with verification.</span></div>
+<div class="feat"><b>MCP support</b><span>stdio + Streamable HTTP servers; your tool ecosystem, first-class.</span></div>
+<div class="feat"><b>25+ built-in tools</b><span>xlsx SAX streaming, git diff, web fetch/search…</span></div>
+<div class="feat"><b>Cost tracking</b><span>Per-conversation spend of YOUR keys, computed and charted.</span></div>
+<div class="feat"><b>Voice chat</b><span>Realtime speech in/out, on-device recognition.</span></div>
+<div class="feat"><b>Messaging channels</b><span>Feishu / WeCom bots drive the same engines remotely.</span></div>
+</div>
+
+<h2 id="free">Free tier — forever, $0</h2>
+<p>Single-engine chat + <b>local Ollama models, permanently free</b>, no account. Paid tier unlocks multi-engine, teams, cron, MCP, voice, channels. 30-day refund on the paid tier.</p>
+
+<!-- TODO(demo-gif): GIF 拍完后恢复此区块 -->
+<!-- TODO(demo-gif): 拍完 GIF 后取消注释并替换 URL
+<img src="DEMO_GIF_URL" alt="KinetAios 30-second demo: install → Ollama → first answer → switch to Claude" style="max-width:100%;border-radius:12px;border:1px solid var(--border);margin:8px 0 24px">
+-->
+
+
+<h2 id="buy">Get it</h2>
+<p><b>Early bird $39 / ¥199</b> — first 500 licenses, then $69 / ¥268. v2 upgrade for early buyers: 40–50% off. MAS edition (same price, Apple IAP) ships when App Store review completes; direct edition ships now with license key + Sparkle updates. <b>How activation works:</b> pay on Gumroad → license key arrives by email instantly → paste it in KinetAios → Settings → License → Verify (needs internet once). 30-day refund, no questions.</p>
+<div class="cta">
+<a class="btn btn-try" href="https://github.com/phinn/KinetAios/releases/download/v3.6.5/KinetAios-3.6.5-arm64.dmg">⬇ Try 5 minutes — free, no signup</a>
+<a class="btn btn-buy" href="https://phinn.gumroad.com/l/kinetaios-mac-pro">Buy — $39 early bird</a>
+<a class="btn btn-ghost" href="GUMROAD_LINK_FALLBACK">Buy via Gumroad (backup)</a>
+</div>
+
+<div class="social-proof" style="margin:24px 0;padding:14px 18px;background:var(--card);border:1px solid var(--border);border-radius:10px;color:var(--dim);font-size:14px">
+<b style="color:var(--fg)">Social proof:</b> <span>SOCIAL_PROOF_LINE_1</span> · <span>SOCIAL_PROOF_LINE_2</span> · <a style="color:var(--acc)" href="https://github.com/phinn/KinetAios">⭐ Star on GitHub</a>
+</div>
+
+<h2>FAQ</h2>
+<details style="margin:8px 0;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 16px"><summary style="cursor:pointer;font-weight:600">Do I need my own API key?</summary><p style="margin-top:10px;color:var(--dim)"><b style="color:var(--fg)">No.</b> Free tier uses local Ollama — completely free, runs offline after the model download. Claude / Codex require your own API key (you pay the LLM provider directly; we don't meter or store).</p></details>
+<details style="margin:8px 0;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 16px"><summary style="cursor:pointer;font-weight:600">What's the catch with $39?</summary><p style="margin-top:10px;color:var(--dim)"><b style="color:var(--fg)">No subscription.</b> One payment = the 1.x line forever. v2 will be a paid upgrade (40–50% off for early buyers). Refunds within 30 days, no questions.</p></details>
+<details style="margin:8px 0;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 16px"><summary style="cursor:pointer;font-weight:600">Is my data local?</summary><p style="margin-top:10px;color:var(--dim)"><b style="color:var(--fg)">Yes.</b> SQLite on your disk. License key + your prompts / answers never leave your Mac. We can't see them.</p></details>
+<details style="margin:8px 0;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 16px"><summary style="cursor:pointer;font-weight:600">How is this different from Cursor / Continue.dev?</summary><p style="margin-top:10px;color:var(--dim)">Cursor = one engine + IDE lock-in. Continue.dev = editor-only. <b style="color:var(--fg)">KinetAios</b> = standalone window with 4 engines side-by-side, so you A/B the same prompt and see the cost dashboard per engine. Plus cron / MCP / channels / voice — full agent harness, not just chat.</p></details>
+<details style="margin:8px 0;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 16px"><summary style="cursor:pointer;font-weight:600">Windows?</summary><p style="margin-top:10px;color:var(--dim)">Engine runtime is open source (<a style="color:var(--acc)" href="https://github.com/phinn/KinetAios">GPLv3</a>) — free forever. Mac is the polished product; Windows binary is community-maintained.</p></details>
+<!-- 邮件兜底:checkout 未接通前流量不白死。action 换真实 endpoint(Gumroad follow / formspree) -->
+<div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px;margin-top:26px">
+<p style="margin:0 0 10px"><b>Prefer a nudge?</b> Drop your email — get the launch price + the 4-engine benchmark report. No spam: one email when checkout opens, one when v2 ships.</p>
+<form action="https://formsubmit.co/phinn@outlook.com" method="POST" style="display:flex;gap:10px;flex-wrap:wrap">
+<input type="email" name="email" required placeholder="you@example.com" style="flex:1;min-width:220px;padding:12px 14px;border-radius:9px;border:1px solid var(--border);background:var(--bg);color:var(--fg);font-size:15px">
+<button type="submit" style="padding:12px 22px;border-radius:9px;border:0;background:linear-gradient(180deg,#2f81f7,#1f6feb);color:#fff;font-weight:600;font-size:15px;cursor:pointer">Notify me</button>
+</form>
+</div>
+<p class="price">Windows? The engine runtime is <a style="color:var(--acc)" href="https://github.com/phinn/KinetAios">open source (GPLv3) — free forever</a>.</p>
+
+<footer>Kinet — local-first AI family · <a href="/">All apps</a> · <a href="https://github.com/phinn/KinetAios">GitHub</a> · Benchmark data: <a href="https://github.com/phinn/KinetAios/blob/main/documents/excel-cross-analysis-engines.html">public report</a></footer>
+</div>
+</body>
+</html>
