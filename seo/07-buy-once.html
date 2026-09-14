@@ -1,0 +1,107 @@
+<!--
+SEO #07 · 目标关键词: one-time purchase ai software / no subscription ai tools / ai subscription fatigue
+发布: KinetAppPortal/seo/07-buy-once.html (M3 W3) · dev.to 英文同步
+内链: 本篇购买意图最强 → checkout 直挂(侧栏+CTA) + 04 旗舰页; canonical=本页
+价格纪律: 早鸟 $39/¥199 前 500 张 → 标准 $69/¥268; 同价于 MAS IAP; 老客 v2 4-5 折; 30 天退款
+SOP: 发布后 48h GSC + UTM(src=seo_07) 外链种子
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One-Time Purchase vs Subscription: What AI Tool Pricing Hides From You</title>
+<meta name="description" content="Subscription fatigue is real — but one-time pricing isn't automatically fairer. A developer who sells AI tools for a flat price explains the economics honestly, including when buy-once is a scam.">
+<style>
+:root{--bg:#0d1117;--card:#161b22;--border:#30363d;--fg:#e6edf3;--dim:#8b949e;--acc:#58a6ff;--gold:#e3b341;--red:#f85149;--green:#3fb950}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:-apple-system,'SF Pro Text',sans-serif;line-height:1.7}
+.wrap{max-width:780px;margin:0 auto;padding:56px 22px}
+h1{font-size:36px;line-height:1.2;letter-spacing:-1px;margin-bottom:14px}
+.meta{color:var(--dim);font-size:14px;margin-bottom:34px}
+h2{font-size:24px;margin:40px 0 12px;letter-spacing:-.3px}
+h3{font-size:18px;margin:26px 0 8px}
+p{margin-bottom:14px;color:#c9d1d9}
+li{margin-bottom:8px;color:#c9d1d9}
+table{border-collapse:collapse;width:100%;margin:18px 0;font-size:14.5px}
+th,td{border:1px solid var(--border);padding:9px 12px;text-align:left}
+th{background:var(--card)}
+td{color:#c9d1d9}
+.hl{color:var(--gold);font-weight:600}
+.bad{color:var(--red);font-weight:600}
+.good{color:var(--green);font-weight:600}
+.callout{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:8px;padding:16px 18px;margin:20px 0;font-size:15px}
+.cta{background:linear-gradient(180deg,#1c2128,#161b22);border:1px solid var(--border);border-radius:12px;padding:22px;margin:34px 0;text-align:center}
+.cta .btn{display:inline-block;padding:11px 26px;border-radius:9px;font-weight:600;text-decoration:none;margin:6px}
+.btn-buy{background:linear-gradient(180deg,#2f81f7,#1f6feb);color:#fff}
+.btn-ghost{border:1px solid var(--border);color:var(--fg)}
+code{background:var(--card);border:1px solid var(--border);border-radius:5px;padding:1px 7px;font-family:ui-monospace,Menlo,monospace;font-size:.9em;color:var(--gold)}
+footer{margin-top:48px;padding-top:22px;border-top:1px solid var(--border);color:var(--dim);font-size:13.5px}
+footer a{color:var(--acc)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>One-Time Purchase vs Subscription: What AI Tool Pricing Hides From You</h1>
+<p class="meta">Kinet · pricing post · the author sells a one-time-purchase app, so treat this as a conflicted confession — we'll show you where buy-once is a scam too · 7 min read</p>
+
+<p>"No subscription, ever" has become marketing catnip. As the developer of a buy-once AI tool, let me do the unfashionable thing: explain the actual economics of both models, including the part of buy-once pricing that vendors hope you never check.</p>
+
+<h2>Subscription fatigue is a data point, not a mood</h2>
+<p>Across consumer software, willingness to start yet another monthly plan keeps falling while the number of active subscriptions per household keeps rising. AI made it worse: now your <i>tools</i> want rent <i>and</i> your <i>models</i> want rent. A developer in 2026 can plausibly carry: a code-assistant sub, a chatbot sub, a notes-app sub, an image-gen sub — before a single API token is bought. The fatigue isn't irrational. It's a stacked-bill problem.</p>
+
+<h2>What a subscription actually prices</h2>
+<p>A sub is honest about one thing: it bundles <b>hosted marginal cost</b> — the vendor pays inference + storage + bandwidth per active user, so per-month pricing matches per-month cost. For genuinely hosted products (cloud compute, live sync infra, streaming APIs), the sub is the fair shape. <span class="bad">No reasonable alternative exists.</span></p>
+
+<h2>What a one-time purchase actually prices</h2>
+<p>For <b>local-first software</b>, the marginal cost of one more user is ≈ $0. The binary sits on your machine; your API usage is billed by your own provider account. Pricing rent on it means charging twice for capacity the vendor never provisions. That's the whole argument.</p>
+<p>But here's the part vendors don't volunteer: <b>buy-once shifts a bet onto you.</b> The vendor must fund future development from past sales. Weak vendors respond predictably:</p>
+<ul>
+<li><span class="bad"> abandonware</span> — buy-once as an exit banner;</li>
+<li><span class="bad"> "v2 is a new product"</span> — your license quietly doesn't cover the thing you actually use;</li>
+<li><span class="bad"> "free updates" with no stated window</span> — technically true, meaningfully nothing.</li>
+</ul>
+<p>So buy-once isn't automatically fairer. It's fairer <b>when the terms are explicit</b>. Which leads to the checklist.</p>
+
+<h2>The buy-once checklist (run any vendor through it)</h2>
+<table>
+<tr><th>Question</th><th>Good answer</th><th>Run</th></tr>
+<tr><td>What do updates include, and until when?</td><td class="good">A stated window (12 mo) + "your version works forever"</td><td class="bad">"Free updates!" (no window)</td></tr>
+<tr><td>Major version policy?</td><td class="good">Discounted upgrade for existing customers (stated %)</td><td class="bad">"v2 sold separately" surprise</td></tr>
+<tr><td>Does the app need the vendor's servers?</td><td class="good">No — license validates offline / generous activations</td><td class="bad">License phones home or app is a shell for a paid API</td></tr>
+<tr><td>Where do YOUR API costs live?</td><td class="good">BYOK — your key, your provider bill, visible</td><td class="bad">Credits/tokens sold by the vendor (a sub in costume)</td></tr>
+<tr><td>Refund terms?</td><td class="good">14-30 days, no interrogation</td><td class="bad">"All sales final"</td></tr>
+</table>
+
+<h2>How we priced KinetAios — terms in the open</h2>
+<ul>
+<li><b>Free tier:</b> single engine + local models via Ollama, <span class="good">free forever</span>. Not a trial — it's a real working tier, because local-first tools have ≈$0 marginal cost and we can afford to mean it.</li>
+<li><b>Pro:</b> <span class="hl">$39 early bird (first 500 licenses)</span>, then $69. One-time.</li>
+<li><b>Updates:</b> 12 months of major updates included; <b>your version keeps working forever</b> after that, including license validation.</li>
+<li><b>Future major versions:</b> existing customers get 40-50% off. Stated now, before there is a v2, so the policy can't be retrofitted.</li>
+<li><b>Where your real cost lives:</b> BYOK. OpenAI/Anthropic/Zhipu/DeepSeek keys stay in your Keychain; the model bill is yours, itemized, with per-conversation tracking in-app — <a href="03-token-audit.html" style="color:var(--acc)">see our 1.31M-token audit for why that meter matters</a>.</li>
+<li><b>Refunds:</b> 30 days via Paddle (or MAS IAP terms), no interrogation.</li>
+</ul>
+
+<div class="callout">Rule of thumb: <b>subscription = paying for hosted marginal cost; buy-once = paying for development, once.</b> Any vendor charging you both — rent <i>and</i> your own compute — is double-billing one of them.</div>
+
+<h2>When buy-once is the wrong answer</h2>
+<p>To be explicit: don't buy this model's promise where it doesn't hold. Continuous-hosting products (cloud sync heavyweights, live-API resellers, anything with servers keeping your state) cannot honestly be buy-once; a vendor claiming otherwise is pre-selling bankruptcy. Buy-once fits <b>local-first tools</b>: the value shipped is a binary that keeps working. If a "buy once" tool quietly requires the vendor's cloud to function, it's a sub wearing a costume — run it through the table above.</p>
+
+<div class="cta">
+<p style="margin-bottom:14px"><b>KinetAios for Mac</b> — 4 AI engines in one native window, BYO keys, local-first memory.</p>
+<a class="btn btn-buy" href="https://phinn.github.io/KinetAppPortal/mac.html?utm_source=devto&utm_medium=referral&utm_campaign=seo-buy-once">Pro $39 early bird · first 500 · one-time</a>
+<a class="btn btn-ghost" href="#" onclick="return false">or try the Free tier (single engine + Ollama, forever)</a>
+<p class="meta" style="margin:10px 0 0">After 500 licenses: $69. Same price on the Mac App Store. 30-day refund.</p>
+</div>
+
+<footer>
+Part of the benchmark series: <a href="04-agent-benchmark.html" style="color:var(--acc)">4 engines, one real task — full scores</a> ·
+<a href="03-token-audit.html" style="color:var(--acc)">where your AI bill actually goes</a><br>
+Kinet · local-first AI apps · <a href="https://github.com/phinn/KinetAios" style="color:var(--acc)">open-source Windows edition (GPL)</a>
+</footer>
+
+</div>
+</body>
+</html>

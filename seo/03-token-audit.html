@@ -1,0 +1,113 @@
+<!--
+SEO #03 · 目标关键词: ai cost tracking / claude code token cost / llm api cost
+发布: KinetAppPortal/seo/03-token-audit.html (M2 W3) · dev.to 英文同步(去掉买断段换 dev.to CTA)
+内链: 侧栏→下载CTA+早鸟checkout; 尾部→04 旗舰页; canonical=本页
+数据源: audit ledger / excel-cross-analysis-engines.html (1.31M tokens / 341 turns / 7.5%→63% / 190K / $0.30)
+SOP: 发布后 48h 提交 GSC + UTM 外链种子(src=seo_03); M3 末 0 展示 → 换词重写
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Audited 1.31M LLM Tokens — Here's Where Your AI Bill Actually Goes</title>
+<meta name="description" content="A full token audit of AI coding agents: 7.5% of API calls consumed 63% of the budget, one call hit 190K tokens. The architecture is the bill, not the model — here's the checklist.">
+<style>
+:root{--bg:#0d1117;--card:#161b22;--border:#30363d;--fg:#e6edf3;--dim:#8b949e;--acc:#58a6ff;--gold:#e3b341;--red:#f85149;--green:#3fb950}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:-apple-system,'SF Pro Text',sans-serif;line-height:1.7}
+.wrap{max-width:780px;margin:0 auto;padding:56px 22px}
+h1{font-size:36px;line-height:1.2;letter-spacing:-1px;margin-bottom:14px}
+.meta{color:var(--dim);font-size:14px;margin-bottom:34px}
+h2{font-size:24px;margin:40px 0 12px;letter-spacing:-.3px}
+p{margin-bottom:14px;color:#c9d1d9}
+li{margin-bottom:8px;color:#c9d1d9}
+table{border-collapse:collapse;width:100%;margin:18px 0;font-size:14.5px}
+th,td{border:1px solid var(--border);padding:9px 12px;text-align:left}
+th{background:var(--card);color:var(--fg)}
+td{color:#c9d1d9}
+.hl{color:var(--gold);font-weight:600}
+.bad{color:var(--red);font-weight:600}
+.good{color:var(--green);font-weight:600}
+.callout{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--acc);border-radius:8px;padding:16px 18px;margin:20px 0;font-size:15px}
+.cta{background:linear-gradient(180deg,#1c2128,#161b22);border:1px solid var(--border);border-radius:12px;padding:22px;margin:34px 0;text-align:center}
+.cta .btn{display:inline-block;padding:11px 26px;border-radius:9px;font-weight:600;text-decoration:none;margin:6px}
+.btn-buy{background:linear-gradient(180deg,#2f81f7,#1f6feb);color:#fff}
+.btn-ghost{border:1px solid var(--border);color:var(--fg)}
+code{background:var(--card);border:1px solid var(--border);border-radius:5px;padding:1px 7px;font-family:ui-monospace,Menlo,monospace;font-size:.9em;color:var(--gold)}
+footer{margin-top:48px;padding-top:22px;border-top:1px solid var(--border);color:var(--dim);font-size:13.5px}
+footer a{color:var(--acc)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>I Audited 1.31M LLM Tokens. Here's Where Your AI Bill Actually Goes.</h1>
+<p class="meta">Kinet Engineering · Part of the <a href="04-agent-benchmark.html" style="color:var(--acc)">4-engine benchmark</a> series · 6 min read</p>
+
+<p>Most "why is my API bill so high" advice stops at <i>"turn down max_tokens"</i>. That's not where the money is. We instrumented every single API call across four AI coding agents running the same real-world task — and the bill has a very specific shape.</p>
+
+<div class="callout">The headline: across <b>1,310,000 audited tokens and 341 turns</b>, <span class="hl">7.5% of API calls consumed <b>63% of the entire budget</b></span>. The worst single call cost <b>190K tokens</b>.</div>
+
+<h2>The task, briefly</h2>
+<p>A 6-sheet medical CRM workbook, several hundred thousand rows. Cross-tabulate downtime/installation data by hospital tier and time window; produce a dark-theme interactive ECharts report. Same task, same model tier, four different agent harnesses. Full scoring in the <a href="04-agent-benchmark.html" style="color:var(--acc)">benchmark article</a>; this post is only about cost.</p>
+
+<h2>Anatomy of a 190K-token call</h2>
+<p>The most expensive single call in the audit happened like this:</p>
+<ul>
+<li>An agent needed data from a workbook exported as a 16-part text dump.</li>
+<li>No file-reading tool — so it shelled out to Bash and <code>cat</code> the parts <b>sequentially, one per turn</b>.</li>
+<li>Each turn re-sent the <b>entire conversation history plus everything read so far</b>.</li>
+<li>By part 16, every call was carrying a ~190K-token payload. Sixteen times.</li>
+</ul>
+<p>Nothing about this is a model problem. The model did what it was told. The harness simply had no native way to touch a big file, and "no tool" silently converts into "burn the context window."</p>
+
+<h2>The full cost ledger</h2>
+<table>
+<tr><th>Engine (same model tier)</th><th>Score /10</th><th>Token behavior</th><th>Cost verdict</th></tr>
+<tr><td>Direct V1 (ours)</td><td>9.2</td><td>Lowest total — native xlsx streaming, the file never enters context</td><td class="good">baseline</td></tr>
+<tr><td>Claude Code</td><td>7.0</td><td>Disciplined loop, but every data step detours through Bash+python → repeated context tax</td><td>~2×</td></tr>
+<tr><td>Codex</td><td>5.5</td><td>Sandbox-first; similar detour tax, fewer recovered steps</td><td>~2×, worse outcome</td></tr>
+<tr><td>Direct V2 (ours, newer)</td><td>3.5</td><td>DAG planner summarizes tables to fit parallel branches — then analyzes hallucinated rows</td><td class="bad">2-3× for a failing result</td></tr>
+</table>
+<p>Total audited: 1.31M tokens / 341 turns. Entire benchmark bill: <span class="hl">$0.30</span> on GLM pricing — cheap enough to run wild, which is exactly why you should be auditing your own agents this way.</p>
+
+<h2>Three context strategies, one winner</h2>
+<ul>
+<li><b>Truncation</b> (drop old turns): cheap, but the agent forgets its own plan and loops. We watched loops cost more than the memory they saved.</li>
+<li><b>Compression</b> (summarize old turns/tables): fine for prose, <span class="bad">lossy for tables</span>. This is what sank V2 — summarized rows became invented rows.</li>
+<li><b>Never load it at all</b>: keep the data on disk behind tools (<code>read_range</code>, <code>filter</code>, <code>aggregate</code>) and pass only results. This is the only strategy that scales, and it's boring engineering, not a clever prompt.</li>
+</ul>
+
+<h2>The 60-second self-audit</h2>
+<p>Open your agent's logs (or your provider dashboard) and check four things:</p>
+<ol>
+<li><b>Payload distribution:</b> sort calls by tokens. If your p95 is more than ~5× your median, something is re-sending history. <span class="hl">(Our 7.5%/63% finding is exactly this shape.)</span></li>
+<li><b>File contents in context:</b> search transcripts for raw data rows. If the model ever "reads" a whole file into the conversation, you're paying compound interest on it every turn.</li>
+<li><b>Cost visibility:</b> if your tool shows conversations but not cost per conversation, you will find out from the invoice instead.</li>
+<li><b>Detour count:</b> count Bash/python round-trips per task. Each one is a context tax paid at full history length.</li>
+</ol>
+
+<h2>What to do about it</h2>
+<p>Not "use a smaller model" — the model was constant across our whole benchmark and the cost still varied 3×. The bill is architecture:</p>
+<ul>
+<li>Native tooling for your dominant data type (for us: SAX-streaming xlsx readers, CSV filters — the file streams through, never sits in context).</li>
+<li>Tool outputs capped at result-size, not raw-size.</li>
+<li>A cost meter next to the conversation, live. Watching a 190K call happen is the only reliable way to care.</li>
+</ul>
+
+<div class="cta">
+<p style="margin-bottom:14px"><b>KinetAios</b> runs 4 agent engines in one native Mac window — with per-conversation cost tracking, BYO keys, and local-first memory. The audit above was run through it.</p>
+<a class="btn btn-ghost" href="#" onclick="return false">Free tier: single engine + Ollama, forever</a>
+<a class="btn btn-buy" href="https://phinn.github.io/KinetAppPortal/mac.html?utm_source=devto&utm_medium=referral&utm_campaign=seo-token-audit">Pro — $39 early bird (first 500), one-time</a>
+<p class="meta" style="margin:10px 0 0">No subscription. Your version keeps working forever.</p>
+</div>
+
+<footer>
+Next in the series: <a href="04-agent-benchmark.html" style="color:var(--acc)">We ran 4 AI coding agents on the same real task — full scores &amp; methodology</a>.<br>
+Kinet · local-first AI apps · <a href="https://github.com/phinn/KinetAios" style="color:var(--acc)">open-source Windows edition (GPL)</a>
+</footer>
+
+</div>
+</body>
+</html>
