@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KinetBend — Privacy Policy</title>
+<meta name="description" content="KinetBend Privacy Policy: no network, no collection, no tracking. All calculations run on your device.">
+<style>
+:root{
+  --bg:#0B0D12; --surface:#141822; --surface2:#1B2130; --line:#262E40;
+  --text:#EDF0F6; --muted:#8F99A9; --dim:#59626F;
+  --orange:#FF9F45; --orange2:#FF7A3D;
+  --grad:linear-gradient(135deg,#FF9F45 0%,#FF7A3D 100%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC","Hiragino Sans","Yu Gothic",Inter,system-ui,sans-serif;line-height:1.8;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(11,13,18,.82);backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15.5px}
+.mark{width:30px;height:30px;border-radius:8px;background:var(--grad);padding:3px;flex:none;display:flex;align-items:center;justify-content:center;font-weight:900;color:#0B0D12;font-size:13px}
+.langs{display:flex;gap:6px}
+.langs button{background:transparent;border:1px solid var(--line);color:var(--muted);font-size:12px;padding:5px 11px;border-radius:999px;cursor:pointer;font-family:inherit;transition:.15s}
+.langs button:hover{color:var(--text);border-color:var(--orange)}
+.langs button.on{background:var(--grad);color:#0B0D12;border-color:transparent;font-weight:600}
+
+main{padding:56px 0 72px}
+.upd{font-size:12.5px;color:var(--dim);margin-bottom:28px}
+h1{font-size:30px;font-weight:800;margin-bottom:10px}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:17.5px;margin:34px 0 12px;display:flex;align-items:center;gap:9px}
+h2 .no{font-size:12px;font-weight:700;background:var(--surface2);border:1px solid var(--line);color:var(--orange);border-radius:7px;padding:2px 8px}
+main p{color:var(--muted);font-size:14px;margin:10px 0}
+main ul{list-style:none;margin:10px 0}
+main li{color:var(--muted);font-size:14px;padding:5px 0 5px 24px;position:relative}
+main li::before{content:"";position:absolute;left:6px;top:14px;width:6px;height:6px;border-radius:50%;background:var(--grad)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px 26px;margin:18px 0}
+.card b{color:var(--text)}
+.ok{color:#4ade80;font-weight:700}
+.mail{display:inline-block;margin-top:14px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:9px 20px;font-size:13.5px;color:var(--text)}
+.mail:hover{border-color:var(--orange)}
+.back{display:inline-block;margin-top:34px;font-size:13.5px;color:var(--orange)}
+.back:hover{text-decoration:underline}
+
+footer{padding:32px 0;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (max-width:640px){h1{font-size:25px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><div class="mark">⌐</div><span>KinetBend</span></a>
+    <div class="langs">
+      <button data-lang="zh-Hans">简体</button>
+      <button data-lang="zh-Hant">繁體</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="ja">日本語</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <h1><span class="grad" data-i18n="pTitle">Privacy Policy</span></h1>
+    <div class="upd" data-i18n="pUpd">Effective date: September 12, 2026 · Applies to KinetBend for iOS</div>
+
+    <div class="card">
+      <p style="margin:0"><span class="ok" data-i18n="pTldrOk">✔ No network · No collection · No tracking</span><br><span data-i18n="pTldr">KinetBend runs entirely on your device. It connects to no servers, collects and uploads no personal data, and contains no analytics or advertising SDKs.</span></p>
+    </div>
+
+    <h2><span class="no">01</span><span data-i18n="s1h">What we collect</span></h2>
+    <p data-i18n="s1p1">Nothing. KinetBend has no accounts, no servers, and the app itself makes no network requests — it never uploads your inputs, calculations, or usage behavior.</p>
+    <p data-i18n="s1p2">You can verify this at the system level: with networking disabled, every feature (all five bend calculators, unit switching, language switching) works exactly the same.</p>
+
+    <h2><span class="no">02</span><span data-i18n="s2h">Data stored on your device</span></h2>
+    <p data-i18n="s2p">The following data stays on your own device and never leaves it:</p>
+    <ul>
+      <li data-i18n="s2l1"><b>Preferences</b> — selected conduit type, units (inches/millimeters), app language. Stored in the app's local storage.</li>
+      <li data-i18n="s2l2"><b>Calculation inputs</b> — the values you enter (heights, angles, obstacle sizes) exist only while you use the app.</li>
+    </ul>
+    <p data-i18n="s2p2">Deleting the app removes all of the above.</p>
+
+    <h2><span class="no">03</span><span data-i18n="s3h">Permissions</span></h2>
+    <p data-i18n="s3p">KinetBend requests no permissions at all — no camera, no microphone, no contacts, no location, no photos.</p>
+
+    <h2><span class="no">04</span><span data-i18n="s4h">Third-party services</span></h2>
+    <p data-i18n="s4p">None. The app embeds no third-party SDKs: no analytics, no ads, no crash reporting, no social login.</p>
+
+    <h2><span class="no">05</span><span data-i18n="s5h">Children's privacy</span></h2>
+    <p data-i18n="s5p">The app is not directed at any age group, and since it collects no data at all, it processes no children's personal information.</p>
+
+    <h2><span class="no">06</span><span data-i18n="s6h">Changes to this policy</span></h2>
+    <p data-i18n="s6p">If a future version changes any data practices, we will update this page and its effective date. Until then, the "zero collection" promise on this page remains in full effect.</p>
+
+    <h2><span class="no">07</span><span data-i18n="s7h">Contact us</span></h2>
+    <p data-i18n="s7p">Questions about this policy? Reach us at:</p>
+    <a class="mail" href="mailto:phinn@outlook.com">phinn@outlook.com</a>
+
+    <br>
+    <a class="back" href="kinetbend-support.html" data-i18n="backHome">← Support</a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 KinetBend · KinetAiDesktop</div>
+    <div><a href="kinetbend-support.html" data-i18n="ftHome">Support</a> · <a href="kinetbend-privacy.html" data-i18n="ftPriv">Privacy Policy</a></div>
+  </div>
+</footer>
+
+<script>
+const I18N = {
+"zh-Hans": {
+  title:"KinetBend — 隐私政策",
+  pTitle:"隐私政策", pUpd:"生效日期:2026 年 9 月 12 日 · 适用于 KinetBend for iOS",
+  pTldrOk:"✔ 零网络 · 零收集 · 零追踪",
+  pTldr:"KinetBend 完全在本地运行,不连接任何服务器,不收集、不上传任何个人数据,不含任何分析或广告 SDK。",
+  s1h:"我们收集什么",
+  s1p1:"什么都不收集。KinetBend 没有账号体系,没有服务器,应用本身不会发起任何网络请求 —— 不上传你的输入、计算结果或使用行为。",
+  s1p2:"你可以在系统层面自行验证:断网状态下应用的一切功能(五种弯型计算、单位切换、语言切换)均完整可用。",
+  s2h:"保存在设备上的数据",
+  s2p:"以下数据仅保存在你自己的设备上,永远不会离开:",
+  s2l1:"<b>偏好设置</b> — 选中的管材类型、单位(英寸/毫米)、应用语言,保存在应用本地存储中。",
+  s2l2:"<b>计算输入</b> — 你输入的数值(高度、角度、障碍物尺寸)仅在使用期间存在。",
+  s2p2:"删除应用即可一并移除上述全部数据。",
+  s3h:"权限使用",
+  s3p:"KinetBend 不申请任何权限 —— 无摄像头、无麦克风、无通讯录、无定位、无照片。",
+  s4h:"第三方服务",
+  s4p:"无。应用不嵌入任何第三方 SDK:没有统计(Analytics)、没有广告、没有崩溃上报、没有社交登录。",
+  s5h:"儿童隐私",
+  s5p:"本应用不面向特定年龄段,且因完全不收集数据,不涉及任何儿童个人信息处理。",
+  s6h:"政策更新",
+  s6p:"若未来版本引入任何数据实践变化,我们会在本页更新并修改生效日期。在此之前,本页所述「零收集」承诺始终有效。",
+  s7h:"联系我们",
+  s7p:"对隐私政策有任何疑问,欢迎来信:",
+  backHome:"← 技术支持", ftHome:"技术支持", ftPriv:"隐私政策"
+},
+"zh-Hant": {
+  title:"KinetBend — 隱私權政策",
+  pTitle:"隱私權政策", pUpd:"生效日期:2026 年 9 月 12 日 · 適用於 KinetBend for iOS",
+  pTldrOk:"✔ 零網路 · 零收集 · 零追蹤",
+  pTldr:"KinetBend 完全在本機執行,不連接任何伺服器,不收集、不上傳任何個人資料,不含任何分析或廣告 SDK。",
+  s1h:"我們收集什麼",
+  s1p1:"什麼都不收集。KinetBend 沒有帳號體系,沒有伺服器,應用程式本身不會發起任何網路請求 —— 不上傳你的輸入、計算結果或使用行為。",
+  s1p2:"你可以在系統層面自行驗證:斷網狀態下應用的一切功能(五種彎型計算、單位切換、語言切換)均完整可用。",
+  s2h:"保存在裝置上的資料",
+  s2p:"以下資料僅保存在你自己的裝置上,永遠不會離開:",
+  s2l1:"<b>偏好設定</b> — 選中的管材類型、單位(英吋/公釐)、應用程式語言,保存在應用程式本機儲存中。",
+  s2l2:"<b>計算輸入</b> — 你輸入的數值(高度、角度、障礙物尺寸)僅在使用期間存在。",
+  s2p2:"刪除應用程式即可一併移除上述全部資料。",
+  s3h:"權限使用",
+  s3p:"KinetBend 不申請任何權限 —— 無相機、無麥克風、無通訊錄、無定位、無照片。",
+  s4h:"第三方服務",
+  s4p:"無。應用程式不嵌入任何第三方 SDK:沒有統計(Analytics)、沒有廣告、沒有當機回報、沒有社交登入。",
+  s5h:"兒童隱私",
+  s5p:"本應用程式不面向特定年齡層,且因完全不收集資料,不涉及任何兒童個人資料處理。",
+  s6h:"政策更新",
+  s6p:"若未來版本引入任何資料實務變更,我們會在本頁更新並修改生效日期。在此之前,本頁所述「零收集」承諾始終有效。",
+  s7h:"聯絡我們",
+  s7p:"對隱私權政策有任何疑問,歡迎來信:",
+  backHome:"← 技術支援", ftHome:"技術支援", ftPriv:"隱私權政策"
+},
+"ja": {
+  title:"KinetBend — プライバシーポリシー",
+  pTitle:"プライバシーポリシー", pUpd:"発効日:2026 年 9 月 12 日 · KinetBend for iOS に適用",
+  pTldrOk:"✔ 通信ゼロ · 収集ゼロ · トラッキングゼロ",
+  pTldr:"KinetBend は完全に端末内で動作します。サーバーに接続せず、個人データを収集・送信せず、分析・広告 SDK を一切含みません。",
+  s1h:"収集するもの",
+  s1p1:"何も収集しません。KinetBend にアカウントもサーバーもなく、アプリ自体がネットワーク要求を発行することはありません —— 入力内容・計算結果・利用状況をアップロードすることは一切ありません。",
+  s1p2:"システムレベルで確認できます:通信をオフにしても、すべての機能(5種類の曲げ計算、単位切替、言語切替)はまったく同じ動作をします。",
+  s2h:"端末内に保存されるデータ",
+  s2p:"以下のデータはあなたの端末内にのみ保存され、外部に出ることはありません:",
+  s2l1:"<b>設定</b> — 選択した管材タイプ、単位(インチ/ミリ)、アプリの言語。アプリのローカルストレージに保存されます。",
+  s2l2:"<b>計算入力</b> — 入力した数値(高さ、角度、障害物サイズ)は使用中のみ存在します。",
+  s2p2:"アプリを削除すれば、上記のデータはすべて削除されます。",
+  s3h:"権限",
+  s3p:"KinetBend はいかなる権限も要求しません —— カメラ、マイク、連絡先、位置情報、写真は一切使用しません。",
+  s4h:"サードパーティサービス",
+  s4p:"なし。サードパーティ SDK は一切埋め込まれていません:分析、広告、クラッシュレポート、ソーシャルログインはありません。",
+  s5h:"子供のプライバシー",
+  s5p:"本アプリは特定の年齢層を対象としておらず、データを一切収集しないため、子供の個人情報を処理することもありません。",
+  s6h:"ポリシーの変更",
+  s6p:"将来のバージョンでデータ扱いに変更があった場合は、本ページと発効日を更新します。それまで、本ページの「ゼロ収集」の約束は完全に有効です。",
+  s7h:"お問い合わせ",
+  s7p:"本ポリシーに関するご質問はこちらまで:",
+  backHome:"← サポート", ftHome:"サポート", ftPriv:"プライバシーポリシー"
+},
+"en": {
+  title:"KinetBend — Privacy Policy",
+  pTitle:"Privacy Policy", pUpd:"Effective date: September 12, 2026 · Applies to KinetBend for iOS",
+  pTldrOk:"✔ No network · No collection · No tracking",
+  pTldr:"KinetBend runs entirely on your device. It connects to no servers, collects and uploads no personal data, and contains no analytics or advertising SDKs.",
+  s1h:"What we collect",
+  s1p1:"Nothing. KinetBend has no accounts, no servers, and the app itself makes no network requests — it never uploads your inputs, calculations, or usage behavior.",
+  s1p2:"You can verify this at the system level: with networking disabled, every feature (all five bend calculators, unit switching, language switching) works exactly the same.",
+  s2h:"Data stored on your device",
+  s2p:"The following data stays on your own device and never leaves it:",
+  s2l1:"<b>Preferences</b> — selected conduit type, units (inches/millimeters), app language. Stored in the app's local storage.",
+  s2l2:"<b>Calculation inputs</b> — the values you enter (heights, angles, obstacle sizes) exist only while you use the app.",
+  s2p2:"Deleting the app removes all of the above.",
+  s3h:"Permissions",
+  s3p:"KinetBend requests no permissions at all — no camera, no microphone, no contacts, no location, no photos.",
+  s4h:"Third-party services",
+  s4p:"None. The app embeds no third-party SDKs: no analytics, no ads, no crash reporting, no social login.",
+  s5h:"Children's privacy",
+  s5p:"The app is not directed at any age group, and since it collects no data at all, it processes no children's personal information.",
+  s6h:"Changes to this policy",
+  s6p:"If a future version changes any data practices, we will update this page and its effective date. Until then, the \"zero collection\" promise on this page remains in full effect.",
+  s7h:"Contact us",
+  s7p:"Questions about this policy? Reach us at:",
+  backHome:"← Support", ftHome:"Support", ftPriv:"Privacy Policy"
+}};
+
+function setLang(lang){
+  const dict = I18N[lang]; if(!dict) return;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k = el.getAttribute('data-i18n');
+    if(dict[k]!==undefined) el.innerHTML = dict[k];
+  });
+  document.documentElement.lang = lang==='zh-Hans'?'zh-CN':lang==='zh-Hant'?'zh-TW':lang==='ja'?'ja':'en';
+  document.title = dict.title;
+  document.querySelectorAll('.langs button').forEach(b=>b.classList.toggle('on', b.dataset.lang===lang));
+  try{ localStorage.setItem('kb-lang', lang); }catch(e){}
+}
+document.querySelectorAll('.langs button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+let saved=null; try{ saved = localStorage.getItem('kb-lang'); }catch(e){}
+if(!saved){
+  const nav = (navigator.languages&&navigator.languages[0])||navigator.language||'en';
+  saved = nav.toLowerCase().startsWith('zh')?(nav.toLowerCase().includes('tw')||nav.toLowerCase().includes('hk')||nav.toLowerCase().includes('hant')?'zh-Hant':'zh-Hans'):nav.toLowerCase().startsWith('ja')?'ja':'en';
+}
+setLang(saved);
+</script>
+</body>
+</html>

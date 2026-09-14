@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KinetAppPortal — Privacy Policy</title>
+<meta name="description" content="KinetAppPortal Privacy Policy: no network, no collection, no tracking. All data (launch history, preferences) stays on your Mac and can be cleared at any time.">
+<style>
+:root{
+  --bg:#0B0D12; --surface:#141822; --surface2:#1B2130; --line:#262E40;
+  --text:#EDF0F6; --muted:#8F99A9; --dim:#59626F;
+  --blue:#5B8CFF; --violet:#8B6CFF;
+  --grad:linear-gradient(135deg,#5B8CFF 0%,#8B6CFF 100%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC","Hiragino Sans","Yu Gothic",Inter,system-ui,sans-serif;line-height:1.8;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(11,13,18,.82);backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15.5px}
+.mark{width:30px;height:30px;border-radius:8px;background:var(--grad);padding:3px;flex:none}
+.langs{display:flex;gap:6px}
+.langs button{background:transparent;border:1px solid var(--line);color:var(--muted);font-size:12px;padding:5px 11px;border-radius:999px;cursor:pointer;font-family:inherit;transition:.15s}
+.langs button:hover{color:var(--text);border-color:var(--blue)}
+.langs button.on{background:var(--grad);color:#fff;border-color:transparent;font-weight:600}
+
+main{padding:56px 0 72px}
+.upd{font-size:12.5px;color:var(--dim);margin-bottom:28px}
+h1{font-size:30px;font-weight:800;margin-bottom:10px}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:17.5px;margin:34px 0 12px;display:flex;align-items:center;gap:9px}
+h2 .no{font-size:12px;font-weight:700;background:var(--surface2);border:1px solid var(--line);color:var(--blue);border-radius:7px;padding:2px 8px}
+main p{color:var(--muted);font-size:14px;margin:10px 0}
+main ul{list-style:none;margin:10px 0}
+main li{color:var(--muted);font-size:14px;padding:5px 0 5px 24px;position:relative}
+main li::before{content:"";position:absolute;left:6px;top:14px;width:6px;height:6px;border-radius:50%;background:var(--grad)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px 26px;margin:18px 0}
+.card b{color:var(--text)}
+.ok{color:#4ade80;font-weight:700}
+.mail{display:inline-block;margin-top:14px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:9px 20px;font-size:13.5px;color:var(--text)}
+.mail:hover{border-color:var(--blue)}
+.back{display:inline-block;margin-top:34px;font-size:13.5px;color:var(--blue)}
+.back:hover{text-decoration:underline}
+
+footer{padding:32px 0;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (max-width:640px){h1{font-size:25px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><div class="mark"><img src="icon.png" alt="" style="width:100%;height:100%;display:block"></div><span>KinetAppPortal</span></a>
+    <div class="langs">
+      <button data-lang="zh-Hans">简体</button>
+      <button data-lang="zh-Hant">繁體</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="ja">日本語</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <h1><span class="grad" data-i18n="pTitle">Privacy Policy</span></h1>
+    <div class="upd" data-i18n="pUpd">Effective date: February 15, 2026 · Applies to KinetAppPortal for macOS</div>
+
+    <div class="card">
+      <p style="margin:0"><span class="ok" data-i18n="pTldrOk">✔ No network · No collection · No tracking</span><br><span data-i18n="pTldr">KinetAppPortal runs entirely on your device. It connects to no servers, collects and uploads no personal data, and contains no analytics or advertising SDKs.</span></p>
+    </div>
+
+    <h2><span class="no">01</span><span data-i18n="s1h">What we collect</span></h2>
+    <p data-i18n="s1p1">Nothing. KinetAppPortal has no accounts, no servers, and the app itself makes no network requests — it never uploads your app list, search queries, or usage behavior.</p>
+    <p data-i18n="s1p2">You can verify this at the system level: with networking disabled, every feature (scanning, pinyin search, launching) works exactly the same.</p>
+
+    <h2><span class="no">02</span><span data-i18n="s2h">Data stored on your Mac</span></h2>
+    <p data-i18n="s2p">The following data stays on your Mac and never leaves your device:</p>
+    <ul>
+      <li data-i18n="s2l1"><b>Launch history</b> — which apps you launched recently (names and times), shown in the "Recently Launched" section; clearable at any time with one click in the app.</li>
+      <li data-i18n="s2l2"><b>Interface preferences</b> — language, view mode (grid/list) and similar settings, stored in system preferences.</li>
+      <li data-i18n="s2l3"><b>Icon cache</b> — app icon cache, used only to speed up rendering.</li>
+    </ul>
+    <p data-i18n="s2p2">Uninstalling the app removes all of the above.</p>
+
+    <h2><span class="no">03</span><span data-i18n="s3h">Permissions</span></h2>
+    <ul>
+      <li data-i18n="s3l1"><b>Reading /Applications and other app folders</b> — solely to list installed apps and their icons; this is the core function of a launcher.</li>
+      <li data-i18n="s3l2"><b>Launching other apps</b> — happens only when you click an app.</li>
+    </ul>
+    <p data-i18n="s3p">Beyond these two, the app requests no other permissions (no camera, no microphone, no contacts, no location).</p>
+
+    <h2><span class="no">04</span><span data-i18n="s4h">Third-party services</span></h2>
+    <p data-i18n="s4p">None. The app embeds no third-party SDKs: no analytics, no ads, no crash reporting, no social login.</p>
+
+    <h2><span class="no">05</span><span data-i18n="s5h">Children's privacy</span></h2>
+    <p data-i18n="s5p">The app is not directed at any age group, and since it collects no data at all, it processes no children's personal information.</p>
+
+    <h2><span class="no">06</span><span data-i18n="s6h">Changes to this policy</span></h2>
+    <p data-i18n="s6p">If a future version changes any data practices, we will update this page and its effective date. Until then, the "zero collection" promise on this page remains in full effect.</p>
+
+    <h2><span class="no">07</span><span data-i18n="s7h">Contact us</span></h2>
+    <p data-i18n="s7p">Questions about this policy? Reach us at:</p>
+    <a class="mail" href="mailto:phinn@outlook.com">phinn@outlook.com</a>
+
+    <br>
+    <a class="back" href="index.html" data-i18n="backHome">← Back to home</a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 KinetAppPortal · KinetAiDesktop</div>
+    <div><a href="index.html" data-i18n="ftHome">Home</a> · <a href="privacy.html" data-i18n="ftPriv">Privacy Policy</a></div>
+  </div>
+</footer>
+
+<script>
+const I18N = {
+"zh-Hans": {
+  title:"KinetAppPortal — 隐私政策",
+  pTitle:"隐私政策", pUpd:"生效日期:2026 年 2 月 15 日 · 适用于 KinetAppPortal for macOS",
+  pTldrOk:"✔ 零网络 · 零收集 · 零追踪",
+  pTldr:"KinetAppPortal 完全在本地运行,不连接任何服务器,不收集、不上传任何个人数据,不含任何分析或广告 SDK。",
+  s1h:"我们收集什么",
+  s1p1:"什么都不收集。KinetAppPortal 没有账号体系,没有服务器,应用本身不会发起任何网络请求 —— 不上传应用列表,不上传搜索关键词,更不上传使用行为。",
+  s1p2:"你可以在系统层面自行验证:断网状态下启动器的一切功能(扫描、拼音搜索、启动)均完整可用。",
+  s2h:"本机上保存的数据",
+  s2p:"以下数据仅保存在你自己的 Mac 上,永远不会离开你的设备:",
+  s2l1:"<b>启动历史</b> — 记录你最近启动了哪些应用(应用名与时间),用于「最近启动」分区;可随时在应用内一键清除。",
+  s2l2:"<b>界面偏好</b> — 语言、视图模式(网格/列表)等设置,保存在系统偏好存储中。",
+  s2l3:"<b>应用缓存</b> — 应用图标缓存,仅用于加速界面渲染。",
+  s2p2:"卸载应用即可一并移除上述全部数据。",
+  s3h:"权限使用",
+  s3l1:"<b>读取 /Applications 等应用目录</b> — 仅用于列出已安装应用及其图标,这是启动器的基础功能。",
+  s3l2:"<b>启动其他应用</b> — 仅在你点击某个应用时发生。",
+  s3p:"除以上两项外,应用不申请任何其他权限(无摄像头、无麦克风、无通讯录、无定位)。",
+  s4h:"第三方服务",
+  s4p:"无。应用不嵌入任何第三方 SDK:没有统计(Analytics)、没有广告、没有崩溃上报、没有社交登录。",
+  s5h:"儿童隐私",
+  s5p:"本应用不面向特定年龄段,且因完全不收集数据,不涉及任何儿童个人信息处理。",
+  s6h:"政策更新",
+  s6p:"若未来版本引入任何数据实践变化,我们会在本页更新并修改生效日期。在此之前,本页所述「零收集」承诺始终有效。",
+  s7h:"联系我们",
+  s7p:"对隐私政策有任何疑问,欢迎来信:",
+  backHome:"← 返回首页", ftHome:"首页", ftPriv:"隐私政策"
+},
+"zh-Hant": {
+  title:"KinetAppPortal — 隱私權政策",
+  pTitle:"隱私權政策", pUpd:"生效日期:2026 年 2 月 15 日 · 適用於 KinetAppPortal for macOS",
+  pTldrOk:"✔ 零網路 · 零收集 · 零追蹤",
+  pTldr:"KinetAppPortal 完全在本機執行,不連接任何伺服器,不收集、不上傳任何個人資料,不含任何分析或廣告 SDK。",
+  s1h:"我們收集什麼",
+  s1p1:"什麼都不收集。KinetAppPortal 沒有帳號體系,沒有伺服器,應用程式本身不會發起任何網路請求 —— 不上傳應用程式清單,不上傳搜尋關鍵字,更不上傳使用行為。",
+  s1p2:"你可以在系統層面自行驗證:斷網狀態下啟動器的一切功能(掃描、拼音搜尋、啟動)均完整可用。",
+  s2h:"本機上保存的資料",
+  s2p:"以下資料僅保存在你自己的 Mac 上,永遠不會離開你的裝置:",
+  s2l1:"<b>啟動歷史</b> — 記錄你最近啟動了哪些應用程式(名稱與時間),用於「最近啟動」分區;可隨時在應用程式內一鍵清除。",
+  s2l2:"<b>介面偏好</b> — 語言、檢視模式(網格/清單)等設定,保存在系統偏好儲存中。",
+  s2l3:"<b>應用程式快取</b> — 應用程式圖示快取,僅用於加速介面渲染。",
+  s2p2:"解除安裝應用程式即可一併移除上述全部資料。",
+  s3h:"權限使用",
+  s3l1:"<b>讀取 /Applications 等應用程式目錄</b> — 僅用於列出已安裝應用程式及其圖示,這是啟動器的基礎功能。",
+  s3l2:"<b>啟動其他應用程式</b> — 僅在你點擊某個應用程式時發生。",
+  s3p:"除以上兩項外,應用程式不申請任何其他權限(無相機、無麥克風、無通訊錄、無定位)。",
+  s4h:"第三方服務",
+  s4p:"無。應用程式不嵌入任何第三方 SDK:沒有統計(Analytics)、沒有廣告、沒有當機回報、沒有社交登入。",
+  s5h:"兒童隱私",
+  s5p:"本應用程式不面向特定年齡層,且因完全不收集資料,不涉及任何兒童個人資料處理。",
+  s6h:"政策更新",
+  s6p:"若未來版本引入任何資料實務變更,我們會在本頁更新並修改生效日期。在此之前,本頁所述「零收集」承諾始終有效。",
+  s7h:"聯絡我們",
+  s7p:"對隱私權政策有任何疑問,歡迎來信:",
+  backHome:"← 返回首頁", ftHome:"首頁", ftPriv:"隱私權政策"
+},
+"en": {
+  title:"KinetAppPortal — Privacy Policy",
+  pTitle:"Privacy Policy", pUpd:"Effective date: February 15, 2026 · Applies to KinetAppPortal for macOS",
+  pTldrOk:"✔ No network · No collection · No tracking",
+  pTldr:"KinetAppPortal runs entirely on your device. It connects to no servers, collects and uploads no personal data, and contains no analytics or advertising SDKs.",
+  s1h:"What we collect",
+  s1p1:"Nothing. KinetAppPortal has no accounts, no servers, and the app itself makes no network requests — it never uploads your app list, search queries, or usage behavior.",
+  s1p2:"You can verify this at the system level: with networking disabled, every feature (scanning, pinyin search, launching) works exactly the same.",
+  s2h:"Data stored on your Mac",
+  s2p:"The following data stays on your Mac and never leaves your device:",
+  s2l1:"<b>Launch history</b> — which apps you launched recently (names and times), shown in the \"Recently Launched\" section; clearable at any time with one click in the app.",
+  s2l2:"<b>Interface preferences</b> — language, view mode (grid/list) and similar settings, stored in system preferences.",
+  s2l3:"<b>Icon cache</b> — app icon cache, used only to speed up rendering.",
+  s2p2:"Uninstalling the app removes all of the above.",
+  s3h:"Permissions",
+  s3l1:"<b>Reading /Applications and other app folders</b> — solely to list installed apps and their icons; this is the core function of a launcher.",
+  s3l2:"<b>Launching other apps</b> — happens only when you click an app.",
+  s3p:"Beyond these two, the app requests no other permissions (no camera, no microphone, no contacts, no location).",
+  s4h:"Third-party services",
+  s4p:"None. The app embeds no third-party SDKs: no analytics, no ads, no crash reporting, no social login.",
+  s5h:"Children's privacy",
+  s5p:"The app is not directed at any age group, and since it collects no data at all, it processes no children's personal information.",
+  s6h:"Changes to this policy",
+  s6p:"If a future version changes any data practices, we will update this page and its effective date. Until then, the \"zero collection\" promise on this page remains in full effect.",
+  s7h:"Contact us",
+  s7p:"Questions about this policy? Reach us at:",
+  backHome:"← Back to home", ftHome:"Home", ftPriv:"Privacy Policy"
+},
+"ja": {
+  title:"KinetAppPortal — プライバシーポリシー",
+  pTitle:"プライバシーポリシー", pUpd:"発効日:2026 年 2 月 15 日 · KinetAppPortal for macOS に適用",
+  pTldrOk:"✔ ネットワークゼロ · 収集ゼロ · トラッキングゼロ",
+  pTldr:"KinetAppPortal は完全にローカルで動作します。サーバーに接続せず、個人データを一切収集・送信せず、分析・広告 SDK を一切含みません。",
+  s1h:"収集するもの",
+  s1p1:"何も収集しません。KinetAppPortal にはアカウントもサーバーもなく、アプリ自体がネットワーク要求を一切行いません —— アプリ一覧も検索キーワードも使用行動も送信しません。",
+  s1p2:"システムレベルで検証できます:ネットワークを切断しても、ランチャーの全機能(スキャン・拼音検索・起動)は完全に動作します。",
+  s2h:"ローカルに保存されるデータ",
+  s2p:"以下のデータはあなたの Mac のみに保存され、デバイスの外に出ることはありません:",
+  s2l1:"<b>起動履歴</b> — 最近起動したアプリ(名前と時刻)を「最近の起動」セクションに表示するためのもの。アプリ内からワンクリックでいつでも消去できます。",
+  s2l2:"<b>インターフェース設定</b> — 言語や表示モード(グリッド/リスト)など。システム設定ストレージに保存されます。",
+  s2l3:"<b>アイコンキャッシュ</b> — 描画を高速化するためのアプリアイコンのキャッシュ。",
+  s2p2:"アプリをアンインストールすれば、上記のデータはすべて削除されます。",
+  s3h:"権限の使用",
+  s3l1:"<b>/Applications などのアプリフォルダの読み取り</b> — インストール済みアプリとそのアイコンを一覧表示するためのみ。ランチャーの基本機能です。",
+  s3l2:"<b>他のアプリの起動</b> — アプリをクリックしたときにのみ発生します。",
+  s3p:"上記 2 つ以外の権限は要求しません(カメラ・マイク・連絡先・位置情報なし)。",
+  s4h:"サードパーティサービス",
+  s4p:"なし。サードパーティ SDK は一切埋め込まれていません:分析なし、広告なし、クラッシュレポートなし、ソーシャルログインなし。",
+  s5h:"子どものプライバシー",
+  s5p:"本アプリは特定の年齢層を対象としておらず、データを一切収集しないため、子どもの個人情報を処理することはありません。",
+  s6h:"ポリシーの変更",
+  s6p:"将来のバージョンでデータに関する慣行を変更する場合は、本ページを更新し発効日を改めます。それまで、本ページの「ゼロ収集」の約束は有効です。",
+  s7h:"お問い合わせ",
+  s7p:"プライバシーポリシーに関するご質問はこちらまで:",
+  backHome:"← ホームへ戻る", ftHome:"ホーム", ftPriv:"プライバシーポリシー"
+}
+};
+const saved = localStorage.getItem("kinetportal_lang");
+apply(saved && I18N[saved] ? saved : "en");
+document.querySelectorAll(".langs button").forEach(b=>b.addEventListener("click",()=>apply(b.dataset.lang)));
+function apply(l){
+  const d = I18N[l];
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const v = d[el.dataset.i18n];
+    if(v!==undefined) el.innerHTML = v;
+  });
+  document.title = d.title;
+  document.documentElement.lang = l;
+  localStorage.setItem("kinetportal_lang", l);
+  document.querySelectorAll(".langs button").forEach(b=>b.classList.toggle("on", b.dataset.lang===l));
+}
+</script>
+
+</body>
+</html>
